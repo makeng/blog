@@ -1,3 +1,13 @@
 theme: jekyll-theme-cayman
 title: ZhaoKeng Ma's homepage
 description: Bookmark this to keep an eye on my project updates!
+
+navigation:
+  - name: 首页
+    url: /
+  - name: 关于
+    url: /about
+  - name: Javascript
+    url: /js
+
+footer-text: Copyright (c) 2022 makeng
