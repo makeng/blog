@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-20T20:33:06+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Not Pure Poole</title><subtitle>A simple, beautiful, and powerful Jekyll theme for blogs</subtitle><author><name>Songzi Vong</name><email>vszhub@gmail.com</email></author><entry><title type="html">我们应如何写好 Javascript</title><link href="http://localhost:4000/js/2022/03/20/about-js/" rel="alternate" type="text/html" title="我们应如何写好 Javascript" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-20T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/20/about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/20/about-js/">&lt;h1 id=&quot;️-javascript&quot;&gt;▪️ Javascript&lt;/h1&gt;
+
+&lt;p&gt;        此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;👶 Splice&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;       与其说我爱Javascript，不如说我恨它。它是C语言和Self语言一夜情的产物。——Brendan Eich&lt;/p&gt;
+
+&lt;p&gt;       十八世纪英国文学家约翰逊博士说得好：它的优秀之处并非原创，它的原创之处并不优秀。当今作为最庞大的用户数的语言，尽管有“绑架业界”的嫌疑，不要企图用 PHP、WebAssembly 去把它连根拔起。把它修补、扩充才是性价比最高的。&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;🙉 OOP + FP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;        OO 的强大不需赘述了，它是模块化编程的基础。以前只能把函数通过 &lt;script&gt; 叠在一起，而 ESM 成熟的今天效率高了不少。&lt;/script&gt;&lt;/p&gt;
+
+&lt;p&gt;        函数式编程是面向数学的抽象，将计算描述为一种&lt;strong&gt;表达式求值&lt;/strong&gt;（参数进入表达式后得到返回值），其实，函数式程序就是一个表达式。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;函数是第一公民&lt;/li&gt;
+  &lt;li&gt;函数应该是纯函数，没有副作用，其结果唯一&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;        第一点在语法上实现了，让函数能被赋值和加工（curry &amp;amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。&lt;/p&gt;
+
+&lt;p&gt;Ref&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html&quot;&gt;Javascript诞生记 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/23569951&quot;&gt;JavaScript算是严格意义上的编程语言吗？ - 知乎&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;-ninja&quot;&gt;🥷 Ninja&lt;/h1&gt;
+&lt;p&gt;【5/14】&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;规划&lt;/th&gt;
+      &lt;th&gt;Learning&lt;/th&gt;
+      &lt;th&gt;Done&lt;/th&gt;
+      &lt;th&gt;Used&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;【浏览器】&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;* DOM 操作&lt;br /&gt;* 事件&lt;br /&gt;* 技巧&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;* 平台与运用&lt;/td&gt;
+      &lt;td&gt;* 页面构建与生命&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【对象】&lt;br /&gt;&lt;br /&gt;* 对象-访问&lt;br /&gt;* 集合&lt;/td&gt;
+      &lt;td&gt;* 对象-原型&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;【函数】&lt;/strong&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;* 函数-参数和环境&lt;br /&gt;* 函数-闭包和作用域&lt;br /&gt;* 生成器和 Promise&lt;/td&gt;
+      &lt;td&gt;* 函数-对象和参数&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;strong&gt;【扩展】&lt;/strong&gt;&lt;br /&gt;&lt;br /&gt;* 正则&lt;br /&gt;* 模块化&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h1 id=&quot;-诞生&quot;&gt;🐣 诞生&lt;/h1&gt;
+&lt;ul&gt;
+  &lt;li&gt;背景：网景公司拥抱JAVA
+    &lt;ul&gt;
+      &lt;li&gt;平台
+        &lt;ul&gt;
+          &lt;li&gt;浏览器：C ++&lt;/li&gt;
+          &lt;li&gt;服务器：（浏览器 V8 core）Nodejs&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+      &lt;li&gt;骨架、肉体与机能
+        &lt;ul&gt;
+          &lt;li&gt;HTML：标记语言（计算机科学家Tim Berners-Lee发明，描述文档结构，也算是计算机语言）&lt;/li&gt;
+          &lt;li&gt;CSS：层叠样式表（同是万维网发明者1990年创造，经过4年后走出实验室）&lt;/li&gt;
+          &lt;li&gt;JS：编程语言（图灵完备）&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;作者：Brendan Eich 对 JAVA 没有兴趣，花了10天设计出来JS&lt;/li&gt;
+  &lt;li&gt;结果：混合产物，函数式编程（作者专长） + 简化的面向对象（公司要求模仿JAVA），总和4种语言的特长
+    &lt;ul&gt;
+      &lt;li&gt;（1）借鉴 C 语言的基本语法；&lt;/li&gt;
+      &lt;li&gt;（2）借鉴 Java 语言的数据类型和内存管理；&lt;/li&gt;
+      &lt;li&gt;（3）借鉴 Scheme 语言，将函数提升到”第一等公民”（first class）的地位；&lt;/li&gt;
+      &lt;li&gt;（4）借鉴 Self 语言，使用基于原型（prototype）的继承机制。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;未来
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;全领域&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;网页&lt;/li&gt;
+      &lt;li&gt;后端&lt;/li&gt;
+      &lt;li&gt;人工智能&lt;/li&gt;
+      &lt;li&gt;物理引擎&lt;/li&gt;
+      &lt;li&gt;网页游戏&lt;/li&gt;
+      &lt;li&gt;AR、VR&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;全功能
+    &lt;ul&gt;
+      &lt;li&gt;安全（劫持）&lt;/li&gt;
+      &lt;li&gt;多端适配&lt;/li&gt;
+      &lt;li&gt;算法问题（比如最短路径）&lt;/li&gt;
+      &lt;li&gt;抽象问题（投影仪模型）&lt;/li&gt;
+      &lt;li&gt;数据可视化（需要数学与物理知识）&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;优点&quot;&gt;优点&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;解释性语言
+    &lt;ul&gt;
+      &lt;li&gt;不需要先编译。直接输入到浏览器，就能逐行解释&lt;/li&gt;
+      &lt;li&gt;弱类型。变量能直接改变类型&lt;/li&gt;
+      &lt;li&gt;安全，不可以修改文件&lt;/li&gt;
+      &lt;li&gt;作用域互借：灵活（调用对象方便）&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;浏览器
+    &lt;ul&gt;
+      &lt;li&gt;多线程：复杂（注意渲染、网络请求等线程的等待问题，但是 JS 是单线程的）&lt;/li&gt;
+      &lt;li&gt;事件驱动&lt;/li&gt;
+      &lt;li&gt;跨平台，前后端兼吃&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;缺点&quot;&gt;缺点&lt;/h2&gt;
+&lt;ul&gt;
+  &lt;li&gt;弱类型：类型难判断，且容易互换&lt;/li&gt;
+  &lt;li&gt;错误类型：null、NaN 等判断奇妙&lt;/li&gt;
+  &lt;li&gt;不够完整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;时间推移，小缺陷不常用不管，硬伤都有了补丁（ECMA）或者覆盖（TypeScript）。&lt;/p&gt;
+
+&lt;h3 id=&quot;-10大缺陷&quot;&gt;🌙 10大缺陷&lt;/h3&gt;
+&lt;p&gt;|🐚|说明|解决|
+| —– | —– | —– |
+|【命名空间】没有|函数和变量都可以覆盖|严格模式的引入|
+|【标准库】比较小| |ES 补充|
+|【null】几乎没有用|和对象奇妙的关系| |
+|【NaN】的存在|超出解释器的极限，typeof NaN === ‘number’| Number.isNaN() |
+|【全局变量】任意操作|所有文件均可写入|IIFE、CommonJS|
+|【编码分号】自动插入| |IDE 可以处理掉|
+|【加号】奇妙类型功能|数字 + 字符 = 「拼接」功能| |
+|【数组】类型难以判断| |大量严格判断函数|
+|【包装对象】混淆|方法生成对象，后面不注意会忘掉| |&lt;/p&gt;</content><author><name>Songzi Vong</name><email>vszhub@gmail.com</email></author><category term="js" /><summary type="html">▪️ Javascript</summary></entry><entry><title type="html">Testing MathJax</title><link href="http://localhost:4000/2020/10/02/testing-mathjax/" rel="alternate" type="text/html" title="Testing MathJax" /><published>2020-10-02T15:32:00+08:00</published><updated>2020-10-02T15:32:00+08:00</updated><id>http://localhost:4000/2020/10/02/testing-mathjax</id><content type="html" xml:base="http://localhost:4000/2020/10/02/testing-mathjax/">&lt;p&gt;Not Pure Poole supports &lt;a href=&quot;https://www.mathjax.org/&quot;&gt;MathJax&lt;/a&gt;. You can enable it on a page by setting &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;math: true&lt;/code&gt; in the front matter.&lt;/p&gt;
+
+&lt;p&gt;An inline math: \(E=mc^2\).&lt;/p&gt;
+
+&lt;p&gt;A display math:&lt;/p&gt;
+
+\[i\hbar \frac{\partial \Psi}{\partial t} = -\frac{\hbar^2}{2m}
+\frac{\partial^2 \Psi}{\partial x^2} + V \Psi\]</content><author><name>Songzi Vong</name><email>vszhub@gmail.com</email></author><category term="mathjax" /><summary type="html">Not Pure Poole supports MathJax. You can enable it on a page by setting math: true in the front matter.</summary></entry><entry><title type="html">Releasing Not Pure Poole v0.1.0</title><link href="http://localhost:4000/2020/10/01/releasing-not-pure-poole-v0-1-0/" rel="alternate" type="text/html" title="Releasing Not Pure Poole v0.1.0" /><published>2020-10-01T13:56:00+08:00</published><updated>2020-10-01T13:56:00+08:00</updated><id>http://localhost:4000/2020/10/01/releasing-not-pure-poole-v0-1-0</id><content type="html" xml:base="http://localhost:4000/2020/10/01/releasing-not-pure-poole-v0-1-0/">&lt;p&gt;The Jekyll theme &lt;strong&gt;Not Pure Poole&lt;/strong&gt; v0.1.0 was released!&lt;/p&gt;
+
+&lt;p&gt;Not Pure Poole is a simple, beautiful, and powerful Jekyll theme for blogs. It is built on &lt;a href=&quot;https://github.com/poole/poole&quot;&gt;Poole&lt;/a&gt; and &lt;a href=&quot;https://purecss.io/&quot;&gt;Pure&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;For more information about this theme, you can read the &lt;a href=&quot;https://github.com/vszhub/not-pure-poole/blob/master/README.md&quot;&gt;README&lt;/a&gt; file.&lt;/p&gt;</content><author><name>Songzi Vong</name></author><category term="jekyll theme" /><category term="jekyll" /><summary type="html">The Jekyll theme Not Pure Poole v0.1.0 was released!</summary></entry><entry><title type="html">Welcome to Not Pure Poole</title><link href="http://localhost:4000/2020/09/29/welcome-to-not-pure-poole/" rel="alternate" type="text/html" title="Welcome to Not Pure Poole" /><published>2020-09-29T23:18:00+08:00</published><updated>2020-10-01T01:08:25+08:00</updated><id>http://localhost:4000/2020/09/29/welcome-to-not-pure-poole</id><content type="html" xml:base="http://localhost:4000/2020/09/29/welcome-to-not-pure-poole/">&lt;p class=&quot;message&quot;&gt;Welcome to &lt;strong&gt;Not Pure Poole&lt;/strong&gt;! This is an example post to show the layout.&lt;/p&gt;
+
+&lt;p&gt;First, do you notice the TOC on the right side? Try to scroll down to read this post, you’ll find that the TOC is always sticky in the viewport.&lt;/p&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
+
+&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
+
+&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;mark&gt;To highlight&lt;/mark&gt;, use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;mark&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
+  &lt;li&gt;Citations, like &lt;cite&gt;— Mark Otto&lt;/cite&gt;, should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
+
+&lt;h2 id=&quot;footnotes&quot;&gt;Footnotes&lt;/h2&gt;
+
+&lt;p&gt;Footnotes are supported as part of the Markdown syntax. Here’s one in action. Clicking this number&lt;sup id=&quot;fnref:fn-sample_footnote&quot; role=&quot;doc-noteref&quot;&gt;&lt;a href=&quot;#fn:fn-sample_footnote&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt; will lead you to a footnote. The syntax looks like:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Clicking this number[^fn-sample_footnote]&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Each footnote needs the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;^fn-&lt;/code&gt; prefix and a unique ID to be referenced for the footnoted content. The syntax for that list looks something like this:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[^fn-sample_footnote]: Handy! Now click the return link to go back.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You can place the footnoted content wherever you like. Markdown parsers should properly place it at the bottom of the post.&lt;/p&gt;
+
+&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
+
+&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
+
+&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
+
+&lt;p&gt;Inline code is available with the &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;code&amp;gt;&lt;/code&gt; element. Snippets of multiple lines of code are supported through Rouge. Longer lines will automatically scroll horizontally when needed. You may also use code fencing (triple backticks) for rendering code.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;You may also optionally show code snippets with line numbers. Add &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;linenos&lt;/code&gt; to the Rouge tags.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-js&quot; data-lang=&quot;js&quot;&gt;&lt;table class=&quot;rouge-table&quot;&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td class=&quot;gutter gl&quot;&gt;&lt;pre class=&quot;lineno&quot;&gt;1
+2
+3
+4
+5
+6
+7
+8
+&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;c1&quot;&gt;// Example can be run directly in your JavaScript console&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Create a function that takes two arguments and returns the sum of those arguments&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;return a + b&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;// Call the function&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;adder&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// &amp;gt; 8&lt;/span&gt;
+&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
+
+&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
+
+&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
+  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
+  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
+  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
+  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
+
+&lt;dl&gt;
+  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
+  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
+
+  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
+  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
+
+  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
+  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
+&lt;/dl&gt;
+
+&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;h3 id=&quot;images&quot;&gt;Images&lt;/h3&gt;
+
+&lt;p&gt;Quisque consequat sapien eget quam rhoncus, sit amet laoreet diam tempus. Aliquam aliquam metus erat, a pulvinar turpis suscipit at.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/800x400&quot; alt=&quot;placeholder&quot; title=&quot;Large example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;placeholder&quot; title=&quot;Medium example image&quot; /&gt;
+&lt;img src=&quot;http://placehold.it/200x200&quot; alt=&quot;placeholder&quot; title=&quot;Small example image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Align to the center by adding &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;class=&quot;align-center&quot;&lt;/code&gt;:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://placehold.it/400x200&quot; alt=&quot;placeholder&quot; title=&quot;Medium example image&quot; class=&quot;align-center&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
+
+&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;Name&lt;/th&gt;
+      &lt;th&gt;Upvotes&lt;/th&gt;
+      &lt;th&gt;Downvotes&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tfoot&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Totals&lt;/td&gt;
+      &lt;td&gt;21&lt;/td&gt;
+      &lt;td&gt;23&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tfoot&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Alice&lt;/td&gt;
+      &lt;td&gt;10&lt;/td&gt;
+      &lt;td&gt;11&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Bob&lt;/td&gt;
+      &lt;td&gt;4&lt;/td&gt;
+      &lt;td&gt;3&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Charlie&lt;/td&gt;
+      &lt;td&gt;7&lt;/td&gt;
+      &lt;td&gt;9&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/vszhub/not-pure-poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
+
+&lt;div class=&quot;footnotes&quot; role=&quot;doc-endnotes&quot;&gt;
+  &lt;ol&gt;
+    &lt;li id=&quot;fn:fn-sample_footnote&quot; role=&quot;doc-endnote&quot;&gt;
+      &lt;p&gt;Handy! Now click the return link to go back. &lt;a href=&quot;#fnref:fn-sample_footnote&quot; class=&quot;reversefootnote&quot; role=&quot;doc-backlink&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
+    &lt;/li&gt;
+  &lt;/ol&gt;
+&lt;/div&gt;</content><author><name>Songzi Vong</name><email>vszhub@gmail.com</email></author><category term="jekyll theme" /><category term="jekyll" /><category term="tutorial" /><summary type="html">Welcome to Not Pure Poole! This is an example post to show the layout.</summary></entry></feed>
