@@ -1,6 +1,6 @@
 # Sleek
 
-[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek) [![Build Status](https://travis-ci.org/janczizikow/sleek.svg?branch=master)](https://travis-ci.org/janczizikow/sleek) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/janczizikow/sleek)
+[![Gem Version](https://badge.fury.io/rb/jekyll-sleek.svg)](https://badge.fury.io/rb/jekyll-sleek) [![Build Status](https://travis-ci.org/makeng/blog.svg?branch=master)](https://travis-ci.org/makeng/blog) [![license](https://img.shields.io/github/license/mashape/apistatus.svg)](https://github.com/makeng/blog)
 
 A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SEO best practices.
 
@@ -17,7 +17,7 @@ A modern [Jekyll](https://jekyllrb.com/) theme focused on speed performance & SE
 * Support for [Disqus](https://disqus.com/) comments
 * Form submissions with [Formspree](#formspree)
 
-[Preview Demo](https://janczizikow.github.io/sleek/)
+[Preview Demo](https://makeng.github.io/blog/)
 
 ## Installation
 
@@ -43,7 +43,7 @@ npm install --global gulp-cli
 
 ### Up & Running
 
-1. [Fork the repo](https://github.com/janczizikow/sleek/fork)
+1. [Fork the repo](https://github.com/makeng/blog/fork)
 2. Clone or download the repo into directory of your choice: `git clone https://github.com/your-github-username/sleek.git`
 3. Inside the directory run `bundle install` and `npm install`
 4. If you want to use [gulp.js](https://gulpjs.com/) run `gulp` or `npm start`
@@ -180,7 +180,7 @@ If you have a Formspree Gold Account, you can take advantage of using AJAX to su
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at [https://github.com/janczizikow/sleek](https://github.com/janczizikow/sleek). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at [https://github.com/makeng/sleek](https://github.com/makeng/sleek). This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
 
 ## Development
 
