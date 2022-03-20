@@ -7,6 +7,7 @@ paginate: 5
 permalink: pretty
 cover_image: /bg.jpeg
 
+
 # Gems
 plugins:
   - jekyll-gist
@@ -40,13 +41,18 @@ sass:
   sass_dir: _sass
   style: :compressed
 
+kramdown:
+  input: GFM
+  auto_ids:       true
+  toc_levels:     1..3
+
 # Options
 
 # Replace this value and uncomment to enable Google Analytics tracking
-# google_analytics: UA-000000-0
+google_analytics: UA-000000-0
 
 # Replace this value and uncomment to enable Disqus
-# disqus: xxxxxx
+disqus: xxxxxx
 
 # Specify the author for blog posts
 author:

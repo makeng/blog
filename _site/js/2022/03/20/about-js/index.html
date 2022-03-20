@@ -12,8 +12,8 @@
 <meta property="og:title" content="我们应如何写好 Javascript" />
 <meta name="author" content="Zhaokeng Ma" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="▪️ Javascript" />
-<meta property="og:description" content="▪️ Javascript" />
+<meta name="description" content="此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。" />
+<meta property="og:description" content="此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。" />
 <link rel="canonical" href="http://localhost:4000/js/2022/03/20/about-js/" />
 <meta property="og:url" content="http://localhost:4000/js/2022/03/20/about-js/" />
 <meta property="og:site_name" content="Makeng’s blog" />
@@ -21,7 +21,7 @@
 <meta property="article:published_time" content="2022-03-20T00:00:00+08:00" />
 <meta name="google-site-verification" content="xxxxx" />
 <script type="application/ld+json">
-{"author":{"@type":"Person","name":"Zhaokeng Ma"},"url":"http://localhost:4000/js/2022/03/20/about-js/","headline":"我们应如何写好 Javascript","dateModified":"2022-03-20T00:00:00+08:00","datePublished":"2022-03-20T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/2022/03/20/about-js/"},"description":"▪️ Javascript","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"url":"http://localhost:4000/js/2022/03/20/about-js/","author":{"@type":"Person","name":"Zhaokeng Ma"},"headline":"我们应如何写好 Javascript","dateModified":"2022-03-20T00:00:00+08:00","datePublished":"2022-03-20T00:00:00+08:00","description":"此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/2022/03/20/about-js/"},"@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Makeng's blog" />
 </head>
@@ -36,7 +36,7 @@
     <a href="/" title="Home">Makeng's blog</a>
   </div>
   <div class="masthead-tagline">
-    <small>Slightly better than my notes</small>
+    <small>Nobody's code style is better than mine</small>
   </div><nav class="navigation">
     <ul class="navigation-list"><li class="navigation-item">
         <a onclick="sessionStorage.setItem('forceCheckScroll', 'true')" href="/">Blog</a>
@@ -64,77 +64,26 @@
   <h1 class="post-title">我们应如何写好 Javascript</h1>
   <div class="post-meta"><time datetime="2022-03-20T00:00:00+08:00" itemprop="datePublished">20 Mar 2022</time></div>
 
-  <h1 id="️-javascript">▪️ Javascript</h1>
-
-<p>        此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。</p>
+  <p>此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。</p>
 
 <p><strong>👶 Splice</strong></p>
 
-<p>       与其说我爱Javascript，不如说我恨它。它是C语言和Self语言一夜情的产物。——Brendan Eich</p>
+<p>与其说我爱Javascript，不如说我恨它。它是C语言和Self语言一夜情的产物。——Brendan Eich</p>
 
-<p>       十八世纪英国文学家约翰逊博士说得好：它的优秀之处并非原创，它的原创之处并不优秀。当今作为最庞大的用户数的语言，尽管有“绑架业界”的嫌疑，不要企图用 PHP、WebAssembly 去把它连根拔起。把它修补、扩充才是性价比最高的。</p>
+<p>十八世纪英国文学家约翰逊博士说得好：它的优秀之处并非原创，它的原创之处并不优秀。当今作为最庞大的用户数的语言，尽管有“绑架业界”的嫌疑，不要企图用 PHP、WebAssembly 去把它连根拔起。把它修补、扩充才是性价比最高的。</p>
 
 <p><strong>🙉 OOP + FP</strong></p>
 
-<p>        OO 的强大不需赘述了，它是模块化编程的基础。以前只能把函数通过 <script> 叠在一起，而 ESM 成熟的今天效率高了不少。</script></p>
+<p>OO 的强大不需赘述了，它是模块化编程的基础。以前只能把函数通过 <script> 叠在一起，而 ESM 成熟的今天效率高了不少。</script></p>
 
-<p>        函数式编程是面向数学的抽象，将计算描述为一种<strong>表达式求值</strong>（参数进入表达式后得到返回值），其实，函数式程序就是一个表达式。</p>
+<p>函数式编程是面向数学的抽象，将计算描述为一种<strong>表达式求值</strong>（参数进入表达式后得到返回值），其实，函数式程序就是一个表达式。</p>
 
 <ul>
   <li>函数是第一公民</li>
   <li>函数应该是纯函数，没有副作用，其结果唯一</li>
 </ul>
 
-<p>        第一点在语法上实现了，让函数能被赋值和加工（curry &amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。</p>
-
-<p>Ref</p>
-
-<ul>
-  <li><a href="https://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">Javascript诞生记 - 阮一峰的网络日志</a></li>
-  <li><a href="https://www.zhihu.com/question/23569951">JavaScript算是严格意义上的编程语言吗？ - 知乎</a></li>
-</ul>
-
-<hr />
-
-<h1 id="-ninja">🥷 Ninja</h1>
-<p>【5/14】</p>
-
-<table>
-  <thead>
-    <tr>
-      <th>规划</th>
-      <th>Learning</th>
-      <th>Done</th>
-      <th>Used</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>【浏览器】</strong><br /><br />* DOM 操作<br />* 事件<br />* 技巧</td>
-      <td> </td>
-      <td>* 平台与运用</td>
-      <td>* 页面构建与生命</td>
-    </tr>
-    <tr>
-      <td>【对象】<br /><br />* 对象-访问<br />* 集合</td>
-      <td>* 对象-原型</td>
-      <td> </td>
-      <td> </td>
-    </tr>
-    <tr>
-      <td><strong>【函数】</strong></td>
-      <td> </td>
-      <td>* 函数-参数和环境<br />* 函数-闭包和作用域<br />* 生成器和 Promise</td>
-      <td>* 函数-对象和参数</td>
-    </tr>
-    <tr>
-      <td><strong>【扩展】</strong><br /><br />* 正则<br />* 模块化</td>
-      <td> </td>
-      <td> </td>
-      <td> </td>
-    </tr>
-  </tbody>
-</table>
+<p>第一点在语法上实现了，让函数能被赋值和加工（curry &amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。</p>
 
 <h1 id="-诞生">🐣 诞生</h1>
 <ul>
@@ -228,6 +177,15 @@
 |【加号】奇妙类型功能|数字 + 字符 = 「拼接」功能| |
 |【数组】类型难以判断| |大量严格判断函数|
 |【包装对象】混淆|方法生成对象，后面不注意会忘掉| |</p>
+
+<hr />
+
+<p>Ref</p>
+
+<ul>
+  <li><a href="https://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html">Javascript诞生记 - 阮一峰的网络日志</a></li>
+  <li><a href="https://www.zhihu.com/question/23569951">JavaScript算是严格意义上的编程语言吗？ - 知乎</a></li>
+</ul>
 
 
 
