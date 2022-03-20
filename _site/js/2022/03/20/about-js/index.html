@@ -12,8 +12,8 @@
 <meta property="og:title" content="我们应如何写好 Javascript" />
 <meta name="author" content="Zhaokeng Ma" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。" />
-<meta property="og:description" content="此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。" />
+<meta name="description" content="Overview" />
+<meta property="og:description" content="Overview" />
 <link rel="canonical" href="http://localhost:4000/js/2022/03/20/about-js/" />
 <meta property="og:url" content="http://localhost:4000/js/2022/03/20/about-js/" />
 <meta property="og:site_name" content="Makeng’s blog" />
@@ -21,7 +21,7 @@
 <meta property="article:published_time" content="2022-03-20T00:00:00+08:00" />
 <meta name="google-site-verification" content="xxxxx" />
 <script type="application/ld+json">
-{"headline":"我们应如何写好 Javascript","url":"http://localhost:4000/js/2022/03/20/about-js/","dateModified":"2022-03-20T00:00:00+08:00","datePublished":"2022-03-20T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/2022/03/20/about-js/"},"author":{"@type":"Person","name":"Zhaokeng Ma"},"description":"此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。","@type":"BlogPosting","@context":"https://schema.org"}</script>
+{"headline":"我们应如何写好 Javascript","url":"http://localhost:4000/js/2022/03/20/about-js/","dateModified":"2022-03-20T00:00:00+08:00","datePublished":"2022-03-20T00:00:00+08:00","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/js/2022/03/20/about-js/"},"author":{"@type":"Person","name":"Zhaokeng Ma"},"description":"Overview","@type":"BlogPosting","@context":"https://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Makeng's blog" />
 </head>
@@ -64,7 +64,9 @@
   <h1 class="post-title">我们应如何写好 Javascript</h1>
   <div class="post-meta"><time datetime="2022-03-20T00:00:00+08:00" itemprop="datePublished">20 Mar 2022</time></div>
 
-  <p>此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。</p>
+  <h1 id="overview">Overview</h1>
+
+<p>此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。</p>
 
 <p><strong>👶 Splice</strong></p>
 
@@ -84,6 +86,8 @@
 </ul>
 
 <p>第一点在语法上实现了，让函数能被赋值和加工（curry &amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。</p>
+
+<p><br /></p>
 
 <h1 id="-诞生">🐣 诞生</h1>
 <ul>
@@ -165,18 +169,66 @@
 
 <p>时间推移，小缺陷不常用不管，硬伤都有了补丁（ECMA）或者覆盖（TypeScript）。</p>
 
-<h3 id="-10大缺陷">🌙 10大缺陷</h3>
-<p>|🐚|说明|解决|
-| —– | —– | —– |
-|【命名空间】没有|函数和变量都可以覆盖|严格模式的引入|
-|【标准库】比较小| |ES 补充|
-|【null】几乎没有用|和对象奇妙的关系| |
-|【NaN】的存在|超出解释器的极限，typeof NaN === ‘number’| Number.isNaN() |
-|【全局变量】任意操作|所有文件均可写入|IIFE、CommonJS|
-|【编码分号】自动插入| |IDE 可以处理掉|
-|【加号】奇妙类型功能|数字 + 字符 = 「拼接」功能| |
-|【数组】类型难以判断| |大量严格判断函数|
-|【包装对象】混淆|方法生成对象，后面不注意会忘掉| |</p>
+<h3 id="10大缺陷">10大缺陷</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>缺陷</th>
+      <th>说明</th>
+      <th>解决</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>【命名空间】没有</td>
+      <td>函数和变量都可以覆盖</td>
+      <td>严格模式的引入</td>
+    </tr>
+    <tr>
+      <td>【标准库】比较小</td>
+      <td> </td>
+      <td>ES 补充</td>
+    </tr>
+    <tr>
+      <td>【null】几乎没有用</td>
+      <td>和对象奇妙的关系</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>【NaN】的存在</td>
+      <td>超出解释器的极限，typeof NaN === ‘number’</td>
+      <td>Number.isNaN()</td>
+    </tr>
+    <tr>
+      <td>【全局变量】任意操作</td>
+      <td>所有文件均可写入</td>
+      <td>IIFE、CommonJS</td>
+    </tr>
+    <tr>
+      <td>【编码分号】自动插入</td>
+      <td> </td>
+      <td>IDE 可以处理掉</td>
+    </tr>
+    <tr>
+      <td>【加号】奇妙类型功能</td>
+      <td>数字 + 字符 = 「拼接」功能</td>
+      <td> </td>
+    </tr>
+    <tr>
+      <td>【数组】类型难以判断</td>
+      <td> </td>
+      <td>大量严格判断函数</td>
+    </tr>
+    <tr>
+      <td>【包装对象】混淆</td>
+      <td>方法生成对象，后面不注意会忘掉</td>
+      <td> </td>
+    </tr>
+  </tbody>
+</table>
+
+<p><br /></p>
 
 <hr />
 
@@ -212,7 +264,25 @@
     </small>
 </footer>
 </div>
-      <div class="sidebar-right pure-u-1 pure-u-md-1-4">
+      <div class="sidebar-right pure-u-1 pure-u-md-1-4"><div class="toc-wrapper">
+    <h2 class="toc-title">Menu</h2>
+    <nav class="toc-nav">
+        <ul class="toc">
+  <li><a href="#overview">Overview</a></li>
+  <li><a href="#-诞生">🐣 诞生</a>
+    <ul>
+      <li><a href="#优点">优点</a></li>
+      <li><a href="#缺点">缺点</a>
+        <ul>
+          <li><a href="#10大缺陷">10大缺陷</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+    </nav>
+</div>
 </div>
     </div>
 

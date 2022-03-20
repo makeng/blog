@@ -1,4 +1,6 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-20T23:03:29+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Makeng’s blog</title><subtitle>Nobody's code style is better than mine</subtitle><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><entry><title type="html">我们应如何写好 Javascript</title><link href="http://localhost:4000/js/2022/03/20/about-js/" rel="alternate" type="text/html" title="我们应如何写好 Javascript" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-20T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/20/about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/20/about-js/">&lt;p&gt;此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-20T23:31:55+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Makeng’s blog</title><subtitle>Nobody's code style is better than mine</subtitle><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><entry><title type="html">我们应如何写好 Javascript</title><link href="http://localhost:4000/js/2022/03/20/about-js/" rel="alternate" type="text/html" title="我们应如何写好 Javascript" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-20T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/20/about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/20/about-js/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+
+&lt;p&gt;此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;👶 Splice&lt;/strong&gt;&lt;/p&gt;
 
@@ -18,6 +20,8 @@
 &lt;/ul&gt;
 
 &lt;p&gt;第一点在语法上实现了，让函数能被赋值和加工（curry &amp;amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h1 id=&quot;-诞生&quot;&gt;🐣 诞生&lt;/h1&gt;
 &lt;ul&gt;
@@ -99,18 +103,66 @@
 
 &lt;p&gt;时间推移，小缺陷不常用不管，硬伤都有了补丁（ECMA）或者覆盖（TypeScript）。&lt;/p&gt;
 
-&lt;h3 id=&quot;-10大缺陷&quot;&gt;🌙 10大缺陷&lt;/h3&gt;
-&lt;p&gt;|🐚|说明|解决|
-| —– | —– | —– |
-|【命名空间】没有|函数和变量都可以覆盖|严格模式的引入|
-|【标准库】比较小| |ES 补充|
-|【null】几乎没有用|和对象奇妙的关系| |
-|【NaN】的存在|超出解释器的极限，typeof NaN === ‘number’| Number.isNaN() |
-|【全局变量】任意操作|所有文件均可写入|IIFE、CommonJS|
-|【编码分号】自动插入| |IDE 可以处理掉|
-|【加号】奇妙类型功能|数字 + 字符 = 「拼接」功能| |
-|【数组】类型难以判断| |大量严格判断函数|
-|【包装对象】混淆|方法生成对象，后面不注意会忘掉| |&lt;/p&gt;
+&lt;h3 id=&quot;10大缺陷&quot;&gt;10大缺陷&lt;/h3&gt;
+
+&lt;table&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;缺陷&lt;/th&gt;
+      &lt;th&gt;说明&lt;/th&gt;
+      &lt;th&gt;解决&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【命名空间】没有&lt;/td&gt;
+      &lt;td&gt;函数和变量都可以覆盖&lt;/td&gt;
+      &lt;td&gt;严格模式的引入&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【标准库】比较小&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;ES 补充&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【null】几乎没有用&lt;/td&gt;
+      &lt;td&gt;和对象奇妙的关系&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【NaN】的存在&lt;/td&gt;
+      &lt;td&gt;超出解释器的极限，typeof NaN === ‘number’&lt;/td&gt;
+      &lt;td&gt;Number.isNaN()&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【全局变量】任意操作&lt;/td&gt;
+      &lt;td&gt;所有文件均可写入&lt;/td&gt;
+      &lt;td&gt;IIFE、CommonJS&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【编码分号】自动插入&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;IDE 可以处理掉&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【加号】奇妙类型功能&lt;/td&gt;
+      &lt;td&gt;数字 + 字符 = 「拼接」功能&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【数组】类型难以判断&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+      &lt;td&gt;大量严格判断函数&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;【包装对象】混淆&lt;/td&gt;
+      &lt;td&gt;方法生成对象，后面不注意会忘掉&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -119,4 +171,4 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html&quot;&gt;Javascript诞生记 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/23569951&quot;&gt;JavaScript算是严格意义上的编程语言吗？ - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><category term="js" /><summary type="html">此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><category term="js" /><summary type="html">Overview</summary></entry></feed>
