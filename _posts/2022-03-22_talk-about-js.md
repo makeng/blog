@@ -1,4 +1,15 @@
+---
+layout: post
+title: "关于 JS，我们聊什么？"
+date: 2022-03-22
+categories: js
+comments: true
+---
+
+
+
 # Code
+
 ## {Features & MVC}
 ### 促使 ESM 出现的理念是什么？
 * 模块化编程并不少见，也不新鲜。必须要以它应对复杂的软件构建
