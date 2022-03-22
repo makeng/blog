@@ -1,29 +1,183 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-20T23:31:55+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Makeng’s blog</title><subtitle>Nobody's code style is better than mine</subtitle><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><entry><title type="html">我们应如何写好 Javascript</title><link href="http://localhost:4000/js/2022/03/20/about-js/" rel="alternate" type="text/html" title="我们应如何写好 Javascript" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-20T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/20/about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/20/about-js/">&lt;h1 id=&quot;overview&quot;&gt;Overview&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="3.9.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-03-22T12:39:17+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Makeng’s blog</title><subtitle>Nobody's code style is better than mine</subtitle><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><entry><title type="html">关于 JS，我们聊什么？</title><link href="http://localhost:4000/js/2022/03/22/talk-about-js/" rel="alternate" type="text/html" title="关于 JS，我们聊什么？" /><published>2022-03-22T00:00:00+08:00</published><updated>2022-03-22T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/22/talk-about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/22/talk-about-js/">&lt;h1 id=&quot;coding&quot;&gt;Coding&lt;/h1&gt;
 
-&lt;p&gt;此文件夹保存的是，JS 真正的、特有的（尽管多是抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;👶 Splice&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;与其说我爱Javascript，不如说我恨它。它是C语言和Self语言一夜情的产物。——Brendan Eich&lt;/p&gt;
-
-&lt;p&gt;十八世纪英国文学家约翰逊博士说得好：它的优秀之处并非原创，它的原创之处并不优秀。当今作为最庞大的用户数的语言，尽管有“绑架业界”的嫌疑，不要企图用 PHP、WebAssembly 去把它连根拔起。把它修补、扩充才是性价比最高的。&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;🙉 OOP + FP&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;OO 的强大不需赘述了，它是模块化编程的基础。以前只能把函数通过 &lt;script&gt; 叠在一起，而 ESM 成熟的今天效率高了不少。&lt;/script&gt;&lt;/p&gt;
-
-&lt;p&gt;函数式编程是面向数学的抽象，将计算描述为一种&lt;strong&gt;表达式求值&lt;/strong&gt;（参数进入表达式后得到返回值），其实，函数式程序就是一个表达式。&lt;/p&gt;
-
+&lt;h2 id=&quot;features&quot;&gt;{Features}&lt;/h2&gt;
+&lt;h3 id=&quot;促使-esm-出现的理念是什么&quot;&gt;促使 ESM 出现的理念是什么？&lt;/h3&gt;
 &lt;ul&gt;
-  &lt;li&gt;函数是第一公民&lt;/li&gt;
-  &lt;li&gt;函数应该是纯函数，没有副作用，其结果唯一&lt;/li&gt;
+  &lt;li&gt;模块化编程并不少见，也不新鲜。必须要以它应对复杂的软件构建&lt;/li&gt;
+  &lt;li&gt;JS 在快速、大规模崛起，ESM 的复用、指针、tree-shaking，帮助支撑这些复杂的逻辑&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;p&gt;第一点在语法上实现了，让函数能被赋值和加工（curry &amp;amp; compose）。第二点就落入了学术的范畴，在业务中难以施展。至于表达式，所有的编程语言都能做到。所以说，FP 是其思想这个说法有点牵强。&lt;/p&gt;
+&lt;h3 id=&quot;有什么容易忽略的性能优化手段&quot;&gt;有什么容易忽略的性能优化手段？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;网络的 CDN、缓存、Gzip&lt;/li&gt;
+  &lt;li&gt;防止内存溢出、图片、列表懒加载也算是优化的一种。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;mvc&quot;&gt;{MVC}&lt;/h2&gt;
+
+&lt;h3 id=&quot;react-最大的性能问题是什么怎么解决&quot;&gt;React 最大的性能问题是什么？怎么解决？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;setState() 语法。一是强制更新，调用了必然整个组件 render()；二是全量，状态更新是向下流动的（从 state 到 props 子组件）一整棵树
+    &lt;ul&gt;
+      &lt;li&gt;用 PureComponent 可以解决，理念同纯函数，无副作用，也就是不触发子组件的更新。不过执行的是浅比较，也就是替换整个对象/数组才能更新复杂数据。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;逻辑控制组件隐藏，显示和隐藏都是瞬间变化的。
+    &lt;ul&gt;
+      &lt;li&gt;引入动画库&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;vue-是否解决了-react-的问题&quot;&gt;Vue 是否解决了 React 的问题？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;性能上，Vue 使用的是响应式机制。一不会强制更新，只会更新数据被触发了更新的部分；二不会触发整个子组件树的更新。&lt;/li&gt;
+  &lt;li&gt;样式上，主要用 style hide 控制隐藏，减少了重排，且天然支持动画&lt;/li&gt;
+  &lt;li&gt;React 采用单向数据流，Vue 用指令封装了双向绑定（bind、sync），节约了代码&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;hooks-合理吗它解决了什么问题&quot;&gt;Hooks 合理吗？它解决了什么问题？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;React 的核心理念一直都是简单易上手，会 JS 等于会 React。比如用 useMemo 来引入函数式中记忆化的概念，来替换独有的 API PureComponent。&lt;/li&gt;
+  &lt;li&gt;👍 从 OOP 向 FP 迈进，作者认为，交互事件更应该偏向功能，而不是 class。
+    &lt;ul&gt;
+      &lt;li&gt;虽然 OOP 支撑了 MVC 很长一段时间，但是回头看业务开发，很多时候，state 的数据之间，或者交互事件之间，并无实际联系，不如拆分。&lt;/li&gt;
+      &lt;li&gt;让开发者根据业务逻辑的天然的内聚性，来组织代码&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;👎 这是范式上的尝试，比较冒进。引入了更多 API，增加了学习成本。不过 API 的增加，可以减少了乱设计的情况，比如 useRef() 提醒大家别什么都扔进 state，或者动不动就把非公共方法挂在 class 上。&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h1 id=&quot;-诞生&quot;&gt;🐣 诞生&lt;/h1&gt;
+&lt;h1 id=&quot;detail&quot;&gt;Detail&lt;/h1&gt;
+&lt;h2 id=&quot;js&quot;&gt;{JS}&lt;/h2&gt;
+&lt;h3 id=&quot;js-的诞生是个错误吗&quot;&gt;JS 的诞生是个错误吗？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;有可能是 JS 绑架了业界的发展。但是面对缺陷，最好是优化，而不是颠覆。&lt;/li&gt;
+  &lt;li&gt;JS 能应对高速发展的时代吗？在刀耕火种的 jQuery 年代，业务简单，JS 的坏处很显眼。但是现在业务编程进入了自动化阶段，业务需求也从普通的切图，上升到复杂的交互，JS 依然能应对，说明它适应着时代。&lt;/li&gt;
+  &lt;li&gt;未来（包括 ES6）的新 API 都是对过去缺陷/问题的补充，甚至有设计（TypeScript）来进行控制。&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;webassembly-的出现是否会取代-javascript---知乎&quot;&gt;&lt;a href=&quot;https://www.zhihu.com/question/322007706/answer/741764049&quot;&gt;WebAssembly 的出现是否会取代 JavaScript？ - 知乎&lt;/a&gt;&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;V8 几乎是这个星球上最先进的工业级脚本语言引擎。别管你代码怎么梭，只要你能让 V8 走在 Happy Path 上，那妥妥都是原生级性能。
+    &lt;ul&gt;
+      &lt;li&gt;大多数页面不会到死抠性能的地步，JS 也不会在 60FPS 下运行。最高性能的原生，代价极高，损耗了性能的 Vue，开发极爽。&lt;/li&gt;
+      &lt;li&gt;音视频、游戏、大数据是性能的重灾区。&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;ES 规范在不断演化。这门语言向下兼容性极佳并且仍然在进化。技术圈内独家的转译玩法，让隔壁还有人为 2 还是 3 站队的时候，前端们都在用 Chrome 明年才会支持的语法特性了。&lt;/li&gt;
+  &lt;li&gt;NPM 背后还有个巨大的娱乐圈，哦不，社区支持。&lt;/li&gt;
+  &lt;li&gt;🐞WebAssembly 工具链复杂、调试困难、调 OpenGL 要回到 WebGL&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;闭包的生命周期有多长会引起内存泄漏吗&quot;&gt;闭包的生命周期有多长？会引起内存泄漏吗？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;⚠️ 它存在于整个程序生命中&lt;/li&gt;
+  &lt;li&gt;用得着就不算泄漏。Vue 源码中也没有对 cache 进行回收&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;错误类型有包装对象吗&quot;&gt;错误类型有包装对象吗？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;实际上没有。Object.prorotype.toString() 的结果，只是看起来有那么个字符串。（总得有个精准的判断吧）&lt;/li&gt;
+  &lt;li&gt;Reflect.toString.call 更简短，效果一致：’[object Undefined]‘、’[object Null]‘、’[object Boolean]’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;函数参数-arguments-转换后是-object-object-吗&quot;&gt;函数参数 arguments 转换后是 ‘[object Object]’ 吗？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;arguments：’[object Arguments]‘，[…arguments] 转成数组就是  ‘[object Array]’&lt;/li&gt;
+  &lt;li&gt;…rest：’[object Array]’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;ts&quot;&gt;{TS}&lt;/h2&gt;
+&lt;h3 id=&quot;tyepscript-是银弹吗&quot;&gt;Tyepscript 是银弹吗？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;不是。只是加速开发、增加严谨性的工具。&lt;/li&gt;
+  &lt;li&gt;真正解决问题，还得看规范和 review。质量问题的重灾区在设计上，极x q少量问题在类型上&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;class-与-interface-的异同在哪&quot;&gt;class 与 interface 的异同在哪？&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;相同：可以相互转化。interface 编译后也是对象，class 可以当成 interface 使用。&lt;/li&gt;
+  &lt;li&gt;不同：interface 是用于规定对象形状的，具体实现由 class 实现。在设计公共类的时候，最适合的是 class 而不是 interface。比如 Cat 继承给 Tiger 和 Leopard，而不是 interface Cat&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;interface-与-type-的区别在哪&quot;&gt;interface 与 type 的区别在哪？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;相同：定义对象形状，支持合并&lt;/li&gt;
+  &lt;li&gt;不同
+    &lt;ul&gt;
+      &lt;li&gt;interface：针对对象和继承，比如 readonly、protect、 extends&lt;/li&gt;
+      &lt;li&gt;
+        &lt;table&gt;
+          &lt;tbody&gt;
+            &lt;tr&gt;
+              &lt;td&gt;type：支持组合，应对更复杂的情况 type ReactNode = ReactChild&lt;/td&gt;
+              &lt;td&gt;ReactFragment&lt;/td&gt;
+              &lt;td&gt;ReactPortal&lt;/td&gt;
+              &lt;td&gt;boolean&lt;/td&gt;
+              &lt;td&gt;null&lt;/td&gt;
+              &lt;td&gt;undefined;&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/tbody&gt;
+        &lt;/table&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;给组件用-dts-文件来声明类型行不行&quot;&gt;给组件用 .d.ts 文件来声明类型行不行？&lt;/h3&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;不行。虽然语法上能编译通过，但是其定义仍然是“库和全局”&lt;/li&gt;
+  &lt;li&gt;正确是声明一个 types.ts&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><category term="js" /><summary type="html">Coding</summary></entry><entry><title type="html">Javascript 的优缺点，以及重点</title><link href="http://localhost:4000/js/2022/03/20/about-js/" rel="alternate" type="text/html" title="Javascript 的优缺点，以及重点" /><published>2022-03-20T00:00:00+08:00</published><updated>2022-03-20T00:00:00+08:00</updated><id>http://localhost:4000/js/2022/03/20/about-js</id><content type="html" xml:base="http://localhost:4000/js/2022/03/20/about-js/">&lt;h1 id=&quot;重点范式&quot;&gt;重点：范式&lt;/h1&gt;
+
+&lt;p&gt;此文件保存的是，JS 真正的、特有的（尽管多是从其他语言抄过来的）特性和能力。只要这些根本的设计不变，那么它们之上的 API 就不会有太偏移的发展。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;-splice&quot;&gt;👶 Splice&lt;/h2&gt;
+
+&lt;p&gt;与其说我爱Javascript，不如说我恨它。它是C语言和Self语言一夜情的产物。——Brendan Eich&lt;/p&gt;
+
+&lt;p&gt;十八世纪英国文学家约翰逊博士说得好：它的优秀之处并非原创，它的原创之处并不优秀。当今作为最庞大的用户数的语言，尽管有“绑架业界”的嫌疑，还是请不要企图用 PHP、WebAssembly 去把它“连根拔起”。把它修补、扩充才是最有价值的。&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;-oop--fp&quot;&gt;🙉 OOP + FP&lt;/h2&gt;
+
+&lt;p&gt;Javascript 有两个常用的范式：&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;OOP。JS 本身就是仿照 Java 来建造的，而 Java 的强项就是 OO。其强大不需赘述了，它是模块化编程的基础，树形结构的代码可以在复杂度可控的前提下无限扩展。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;函数式编程。它是面向数学的抽象，将计算描述为一种&lt;strong&gt;表达式求值&lt;/strong&gt;（参数进入表达式后得到返回值），其实，函数式程序就是一个表达式。&lt;/p&gt;
+
+    &lt;ul&gt;
+      &lt;li&gt;
+        &lt;p&gt;函数是第一公民&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;函数应该是纯函数，没有副作用，其结果唯一&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;OOP 无需赘述，前端们开发的环境 window 和 JS 本身就是对象，用的 MVC 框架也是对象。至于函数式，常见的业务基本都不能满足纯函数的条件，因为我们无时无刻不在操作一些全局变量和外部对象。Hooks 则是&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h1 id=&quot;优缺点--历史&quot;&gt;优缺点 &amp;amp; 历史&lt;/h1&gt;
+
+&lt;p&gt;先看看历史，这是造成 JS 早期被开发者诟病的缺点的起源。由于历史不是重点，就简单概括下：&lt;/p&gt;
+
 &lt;ul&gt;
   &lt;li&gt;背景：网景公司拥抱JAVA
     &lt;ul&gt;
@@ -52,17 +206,15 @@
     &lt;/ul&gt;
   &lt;/li&gt;
   &lt;li&gt;未来
-    &lt;ul&gt;
-      &lt;li&gt;
-        &lt;p&gt;全领域&lt;/p&gt;
-      &lt;/li&gt;
+    &lt;ol&gt;
+      &lt;li&gt;全领域&lt;/li&gt;
       &lt;li&gt;网页&lt;/li&gt;
       &lt;li&gt;后端&lt;/li&gt;
       &lt;li&gt;人工智能&lt;/li&gt;
       &lt;li&gt;物理引擎&lt;/li&gt;
       &lt;li&gt;网页游戏&lt;/li&gt;
       &lt;li&gt;AR、VR&lt;/li&gt;
-    &lt;/ul&gt;
+    &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;全功能
     &lt;ul&gt;
@@ -95,15 +247,6 @@
 &lt;/ul&gt;
 
 &lt;h2 id=&quot;缺点&quot;&gt;缺点&lt;/h2&gt;
-&lt;ul&gt;
-  &lt;li&gt;弱类型：类型难判断，且容易互换&lt;/li&gt;
-  &lt;li&gt;错误类型：null、NaN 等判断奇妙&lt;/li&gt;
-  &lt;li&gt;不够完整&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;时间推移，小缺陷不常用不管，硬伤都有了补丁（ECMA）或者覆盖（TypeScript）。&lt;/p&gt;
-
-&lt;h3 id=&quot;10大缺陷&quot;&gt;10大缺陷&lt;/h3&gt;
 
 &lt;table&gt;
   &lt;thead&gt;
@@ -162,7 +305,15 @@
   &lt;/tbody&gt;
 &lt;/table&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;总结一下，缺点如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;弱类型：类型难判断，且容易互换&lt;/li&gt;
+  &lt;li&gt;错误类型：null、NaN 等判断奇妙&lt;/li&gt;
+  &lt;li&gt;不够完整&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;随着时间推移，我们渐渐看不到它们缺陷造成的问题了。类型方面的缺陷有 TypeScript 进行解决，语法不完整则由补丁 ECMAScript 每年进行修复。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -171,4 +322,4 @@
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.ruanyifeng.com/blog/2011/06/birth_of_javascript.html&quot;&gt;Javascript诞生记 - 阮一峰的网络日志&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://www.zhihu.com/question/23569951&quot;&gt;JavaScript算是严格意义上的编程语言吗？ - 知乎&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</content><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><category term="js" /><summary type="html">Overview</summary></entry></feed>
+&lt;/ul&gt;</content><author><name>Zhaokeng Ma</name><email>810768333@qq.com</email></author><category term="js" /><summary type="html">重点：范式</summary></entry></feed>

@@ -8,14 +8,23 @@ comments: true
 
 
 
-# Code
+# Coding
 
-## {Features & MVC}
+## {Features}
 ### 促使 ESM 出现的理念是什么？
 * 模块化编程并不少见，也不新鲜。必须要以它应对复杂的软件构建
 * JS 在快速、大规模崛起，ESM 的复用、指针、tree-shaking，帮助支撑这些复杂的逻辑
 
 
+
+### 有什么容易忽略的性能优化手段？
+
+* 网络的 CDN、缓存、Gzip
+* 防止内存溢出、图片、列表懒加载也算是优化的一种。
+
+
+
+## {MVC}
 
 ### React 最大的性能问题是什么？怎么解决？
 * setState() 语法。一是强制更新，调用了必然整个组件 render()；二是全量，状态更新是向下流动的（从 state 到 props 子组件）一整棵树
@@ -47,14 +56,8 @@ comments: true
 
 
 
-## {Performance}
-### 有什么容易忽略的性能优化手段？
-* 网络的 CDN、缓存、Gzip
-* 防止内存溢出、图片、列表懒加载也算是优化的一种。
 
-
-
-
+<br/>
 
 # Detail
 ## {JS}
@@ -125,7 +128,3 @@ comments: true
 
 
 
-
-# Others
-## ⏳Speed Run
-1. 11:16
