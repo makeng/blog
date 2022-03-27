@@ -2,13 +2,15 @@
 layout: post
 title: "关于浏览器，我们聊什么？"
 date: 2022-03-27
-categories: Browser, HTML, UX
+categories: Browser HTML UX
 comments: true
 ---
 
 
 
-# {HTML}
+# 模型
+
+## {HTML}
 
 ### HTML 标签分多少类？你为什么这样分类？
 
@@ -17,9 +19,9 @@ comments: true
 
 
 
-### 为什么一些有用的标签如 <i>、<b> 之类，在开发中很少使用？
+### 为什么一些有用的标签如 i、b 之类，在开发中很少使用？
 
 - 因为不规范不标准，只有部分浏览器支持。一些新标签如 progress，都是用组件库的进度条实现。（[有哪些被低估未被广泛使用的有用的 HTML标签？ - 知乎](https://www.zhihu.com/question/396745068/answer/1257077938)）
 
-- 封装的 MVC 库有自己特有的标签库，尽管它们的本质是一样的。比如 Taro 用 <Text> 放置文本，不支持 <i> 之类的原生标签。
+- 封装的 MVC 库有自己特有的标签库，尽管它们的本质是一样的。比如 Taro 用 Text 放置文本，不支持  i 之类的原生标签。
 
