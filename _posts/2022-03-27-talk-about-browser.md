@@ -2,7 +2,7 @@
 layout: post
 title: "关于浏览器，我们聊什么？"
 date: 2022-03-27
-categories: Browser HTML UX
+categories: FE
 comments: true
 ---
 
