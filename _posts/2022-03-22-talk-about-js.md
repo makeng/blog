@@ -7,7 +7,6 @@ comments: true
 ---
 
 
-
 # Coding
 
 ## {Features}
@@ -53,10 +52,6 @@ comments: true
 
 
 
-
-
-
-
 <br/>
 
 # Detail
@@ -68,7 +63,7 @@ comments: true
 
 
 
-### [WebAssembly 的出现是否会取代 JavaScript？ - 知乎](https://www.zhihu.com/question/322007706/answer/741764049)
+### [WebAssembly 的出现是否会取代 JavaScript？](https://www.zhihu.com/question/322007706/answer/741764049)
    * V8 几乎是这个星球上最先进的工业级脚本语言引擎。别管你代码怎么梭，只要你能让 V8 走在 Happy Path 上，那妥妥都是原生级性能。
       * 大多数页面不会到死抠性能的地步，JS 也不会在 60FPS 下运行。最高性能的原生，代价极高，损耗了性能的 Vue，开发极爽。
       * 音视频、游戏、大数据是性能的重灾区。
